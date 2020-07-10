@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="root"></div>
+    <!-- <div class="title">React</div>
+    <img src="https://picsum.photos/id/237/200/300"> -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const todos = [
+            'Go to market',
+            'Buy food',
+            'Make dinner'
+        ];
+        const li = todos.map(function(item){
+            return <li>{item}</li>
+        })
+        const ul = <ul>{li}</ul>
+        const Hello = <div className="title">Hello Coderx-Tokyo</div>
+        const Image = <img src="https://picsum.photos/id/237/200/300"></img>
+        const App = React.createElement('div',null, Hello, Image, ul)
+        const root = document.getElementById('root')
+        ReactDOM.render(App, root)
+        
+    </script>
+</body>
+</html>
